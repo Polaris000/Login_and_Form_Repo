@@ -1,11 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 from allauth.socialaccount.models import SocialAccount
 
 
-class User(AbstractUser):
+class Player(models.Model):
 
-   # name = models.OneToOneField(User, null=True, blank=True)
+   name = models.OneToOneField(User, null=True, blank=True)
    rank = models.IntegerField(blank=True)
    lev_num = models.IntegerField(default=1)
    num_diamonds = models.IntegerField(default=100)
