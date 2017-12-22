@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import Player, Problem, Level
+from .models import User, Problem, Level
 from django.views.generic.edit import CreateView, UpdateView
 from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login     # verifies login
