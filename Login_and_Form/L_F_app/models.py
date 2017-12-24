@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from allauth.socialaccount.models import SocialAccount
 
 
-class User(AbstractUser):
+class Cust_User(AbstractUser):
 
    # name = models.OneToOneField(User, null=True, blank=True)
    rank = models.IntegerField(blank=True)
@@ -21,7 +21,7 @@ class User(AbstractUser):
    # score = # formula
 
    def __str__(self):
-      return str(self.name) #+ "-" # + str(self.score)
+      return str(self.username) #+ "-" # + str(self.score)
 
 
 class Level(models.Model):
