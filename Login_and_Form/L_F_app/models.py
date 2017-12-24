@@ -1,11 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from allauth.socialaccount.models import SocialAccount
 
 
-class Player(models.Model):
+class Cust_User(AbstractUser):
 
-   name = models.OneToOneField(User, null=True, blank=True)
+   # name = models.OneToOneField(User, null=True, blank=True)
    rank = models.IntegerField(blank=True)
    lev_num = models.IntegerField(default=1)
    num_diamonds = models.IntegerField(default=100)
@@ -21,7 +21,7 @@ class Player(models.Model):
    # score = # formula
 
    def __str__(self):
-      return str(self.name) #+ "-" # + str(self.score)
+      return str(self.username) #+ "-" # + str(self.score)
 
 
 class Level(models.Model):
