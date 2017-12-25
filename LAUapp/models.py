@@ -3,10 +3,9 @@ from django.contrib.auth.models import AbstractUser
 from allauth.socialaccount.models import SocialAccount
 
 
-class Cust_User(AbstractUser):
-
-   # name = models.OneToOneField(User, null=True, blank=True)
-   rank = models.IntegerField(blank=True)
+class CustUser(AbstractUser):
+   
+   rank = models.IntegerField(blank=True, null=True)
    lev_num = models.IntegerField(default=1)
    num_diamonds = models.IntegerField(default=100)
 
@@ -50,3 +49,4 @@ class Problem(models.Model):
 
 
 # formula = diamonds * 10 + emeralds * 100 + 1 * (total_levels - lev_num)
+

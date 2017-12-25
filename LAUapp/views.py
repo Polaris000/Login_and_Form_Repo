@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import Cust_User, Problem, Level
+from .models import CustUser, Problem, Level
 from django.views.generic.edit import CreateView, UpdateView
 from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login     # verifies login
@@ -14,6 +14,6 @@ from django.contrib.auth.models import User
 
 def index(request):
    if request.user.is_authenticated():
-      return render(request, "L_F_app/index.html")
+      return render(request, "LAUapp/index.html")
    else:
       return HttpResponseRedirect("accounts/login/")
